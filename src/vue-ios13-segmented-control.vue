@@ -33,12 +33,12 @@ export default {
     },
     segments: {
       required: true,
-      type: Object
+      type: Array
     },
     elementName: {
       type: String,
       required: false,
-      default: () => getRandomInt(100000)
+      default: () => '' + getRandomInt(100000)
     }
   },
   data() {
@@ -47,9 +47,11 @@ export default {
     };
   },
 
+
   mounted() {
     window.addEventListener('resize', this.recalculateSelectedSegmentWidth);
   },
+  
   beforeDestroy() {
     window.removeEventListener('resize', this.recalculateSelectedSegmentWidth);
   },
@@ -60,24 +62,35 @@ export default {
         return this.value;
       },
       set(segmentId) {
-        // this.value = segmentId;
-        this.$emit("change", segmentId);
+        this.$emit("input", segmentId);
       }
     },
     selectedSegmentIndex() {
       return this.segments.findIndex(segment => segment.id === this.value);
     },
     pillTransformStyles() {
-      this.recalculateSelectedSegmentWidth();
-      return "transform:translateX(" + (this.selectedSegmentWidth * this.selectedSegmentIndex) + "px)" + `;width:${this.selectedSegmentWidth}px;`;
+      return "transform:translateX(" + (this.selectedSegmentWidth * this.selectedSegmentIndex) + "px)";
     }
   },
 
   methods: {
     recalculateSelectedSegmentWidth() {
-      const segmentElement = document.querySelector(`input[type='radio'][value='${this.value}']`);
-      this.selectedSegmentWidth = segmentElement && segmentElement.scrollWidth;
-      this.selectedSegmentPositionLeft = segmentElement && segmentElement.getBoundingClientRect().left;
+      // Wait for UI to rerender before measuring
+      this.$nextTick(()=>{
+        const segmentElement = document.querySelector(`input[type='radio'][value='${this.value}']`);
+        this.selectedSegmentWidth = segmentElement && segmentElement.offsetWidth;
+      })
+    }
+  },
+
+  watch: {
+    // If segments are added, edited, or removed
+    segments() {
+      this.recalculateSelectedSegmentWidth();
+    },
+    // If the segment is changed programmatically
+    value() {
+      this.recalculateSelectedSegmentWidth();
     }
   }
 }

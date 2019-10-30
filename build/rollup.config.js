@@ -34,7 +34,7 @@ const baseConfig = {
 const external = [
   // list external dependencies, exactly the way it is written in the import statement.
   // eg. 'jquery'
-  // 'vue-runtime-helpers'
+  'vue-runtime-helpers'
 ];
 const globals = {
   // Provide global variable names to replace your external imports
@@ -47,7 +47,7 @@ if (!argv.format || argv.format === 'es') {
   const esConfig = {
     ...baseConfig,
     output: {
-      file: 'dist/vue-ios-13-segmented-control.esm.js',
+      file: 'dist/vue-ios13-segmented-control.esm.js',
       format: 'esm',
       exports: 'named',
     },
@@ -71,7 +71,7 @@ if (!argv.format || argv.format === 'cjs') {
     external,
     output: {
       compact: true,
-      file: 'dist/vue-ios-13-segmented-control.ssr.js',
+      file: 'dist/vue-ios13-segmented-control.ssr.js',
       format: 'cjs',
       name: 'iOS13SegmentedControl',
       exports: 'named',
@@ -98,7 +98,7 @@ if (!argv.format || argv.format === 'iife') {
     external,
     output: {
       compact: true,
-      file: 'dist/vue-ios-13-segmented-control.min.js',
+      file: 'dist/vue-ios13-segmented-control.min.js',
       format: 'iife',
       name: 'iOS13SegmentedControl',
       exports: 'named',

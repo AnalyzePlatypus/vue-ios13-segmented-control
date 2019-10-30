@@ -1,13 +1,14 @@
 <template>
   <div class='dev-workspace-container'>
     <ios13-segmented-control v-model="value" :segments="segments"/>
+    <button @click="segments.pop()"></button>
   </div>
 </template>
 
 <script>
 
 import Vue from 'vue';
-import iOS13SegmentedControl from "@/vue-ios-13-segmented-control.vue";
+import iOS13SegmentedControl from "@/vue-ios13-segmented-control.vue";
 
 Vue.component("ios13-segmented-control", iOS13SegmentedControl);
 
@@ -36,7 +37,6 @@ export default {
       ]
     };
   },
-  
 };
 </script>
 

@@ -1,5 +1,5 @@
 // Import vue component
-import component from './vue-ios-13-segmented-control.vue';
+import component from './vue-ios13-segmented-control.vue';
 
 // install function executed by Vue.use()
 function install(Vue) {
