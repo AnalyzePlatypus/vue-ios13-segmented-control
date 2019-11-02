@@ -13,6 +13,7 @@
   "scripts": {
     "serve": "vue serve ./dev/DevWorkspace.vue",
     "build": "cross-env NODE_ENV=production rollup --config build/rollup.config.js",
+    "build:demo": "cd demo-site &&  NODE_ENV=production npm run build",
     "build:ssr": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format cjs",
     "build:es": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format es",
     "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife"

@@ -2,16 +2,14 @@
 
 A Vue component inspired by the new skeumorphic segmented control in iOS 13.
 
+[Live demo › ](https://vue-ios13-segmented-control.netlify.com)
+
+![Demo GIF](/demo.gif)
+
 ## Install
 
 ```bash
 npm i vue-ios13-segmented-control
-```
-
-Or use the `unpkg` CDN:
-
-```html
-<script src="https://unpkg.com/vue-ios13-segmented-control@1.0.1/dist/vue-ios13-segmented-control.min.js" integrity="sha384-M63o+KK9pQcShpoV2/YwrXPOoOumiHtXBy+8URwNOQBeNhav4XrDp3uV0+qwmjr8" crossorigin="anonymous"></script>
 ```
 
 ## Usage
