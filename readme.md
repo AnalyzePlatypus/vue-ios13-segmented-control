@@ -73,7 +73,7 @@ Running the build script generate `main` (`.ssr.js`), `module` (`.esm.js`), and 
 
 ## Thank you
 
-* Styles based on  [this repo](https://github.com/eljoseurena/ios-13-Style-Switcher) by [@eljoseurena](https://github.com/eljoseurena)
+* Styles based on  [this repo](https://github.com/laurasandoval/ios-13-Style-Switcher) by [@laurasandoval](https://github.com/laurasandoval)
 
 * The component development template I used is [vue-sfc-rollup](https://github.com/team-innovation/vue-sfc-rollup) by [Team Innovation](https://github.com/team-innovation)
 
