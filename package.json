@@ -21,7 +21,7 @@
   "devDependencies": {
     "cross-env": "^5.2.0",
     "minimist": "^1.2.5",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "rollup": "^1.32.1",
     "rollup-plugin-buble": "^0.19.6",
     "rollup-plugin-commonjs": "^10.0.0",
