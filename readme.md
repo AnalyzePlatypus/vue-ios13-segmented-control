@@ -71,6 +71,13 @@ npm run build
 
 Running the build script generate `main` (`.ssr.js`), `module` (`.esm.js`), and `unpkg` (`.min.js`) versions in the `dist` directory.
 
+Publish with:
+
+```bash
+npm run build
+npm publish
+```
+
 ## Thank you
 
 * Styles based on  [this repo](https://github.com/laurasandoval/ios-13-Style-Switcher) by [@laurasandoval](https://github.com/laurasandoval)

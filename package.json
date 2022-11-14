@@ -1,6 +1,6 @@
 {
   "name": "vue-ios13-segmented-control",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Vue.js radio button component inspired by the new skeuomorphic segmented control in iOS 13",
   "repository": "https://github.com/AnalyzePlatypus/vue-ios13-segmented-control",
   "main": "dist/vue-ios13-segmented-control.ssr.js",
